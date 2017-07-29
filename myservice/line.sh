@@ -12,7 +12,7 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-curl -X POST "${SERVICE_URL}" -d - <<EOT
+curl -X POST "${SERVICE_URL}" -d @- <<EOT
 {
   "service_method": "line_push",
   "text": "${TEXT}"
